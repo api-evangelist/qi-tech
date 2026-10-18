@@ -1,0 +1,23 @@
+generated: '2026-10-18'
+method: searched
+source: https://qitech.com.br/contato/
+name: QI Tech pricing
+audience: business-product
+pricing_basis: negotiated
+published: false
+delivery:
+  delivery: managed
+  evidence: Enterprise financial infrastructure services
+plans:
+  - name: Enterprise
+    description: Custom pricing based on services and volume
+    price_text: Fale com nosso time de vendas
+    features:
+      - Banking as a Service
+      - Lending as a Service
+      - Risk Solutions
+      - Insurance as a Service
+      - CertifiQI
+      - Investment Fund Administration
+    limits: []
+note: Pricing is enterprise/negotiated. Contact sales team via https://qitech.com.br/contato/ for commercial configuration.

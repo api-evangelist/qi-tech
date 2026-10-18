@@ -1,0 +1,59 @@
+generated: '2026-10-18'
+method: searched
+source: https://docs.qitech.com.br/documentation/emissao_de_divida/catalogo_de_erros_laas
+format: application/json
+envelope:
+  code: code
+  message: message
+problems:
+  - status: 400
+    title: Schema Validator Error
+    type: QIT000001
+    description: Payload Inválido {description}
+    remediation: Check request payload format and schema
+  - status: 403
+    title: Permission Validator Error
+    type: QIT000002
+    description: Request must be internal
+    remediation: Verify authentication and permissions
+  - status: 403
+    title: Permission Validator Error
+    type: QIT000003
+    description: O agente não tem funções suficientes. The agent does not have enough roles.
+    remediation: Check user roles and permissions
+  - status: 403
+    title: Permission Validator Error
+    type: QIT000004
+    description: Agente selecionado e person_key são diferentes Selected agent and person_key are different
+    remediation: Verify agent and person_key match
+  - status: 403
+    title: Permission Validator Error
+    type: QIT000005
+    description: O agente selecionado não é dono do item. Selected agent do not own this item.
+    remediation: Check item ownership
+  - status: 403
+    title: Permission Validator Error
+    type: QIT000006
+    description: Agente selecionado não é dono deste item e não tem funções suficientes. Selected agent do not own this item and has not enough roles.
+    remediation: Verify ownership or sufficient roles
+  - status: 400
+    title: Search Params Error
+    type: QIT000010
+    description: Valor inválido para parâmetros página ou tamanho de página Invalid integer value for page or size querystring parameters
+    remediation: Check pagination parameters
+  - status: 400
+    title: Bad Request
+    type: QIT000400
+    description: O servidor não pode ou não processará a requisição devido a um erro do cliente (por exemplo, corpo da requisição inválido, tamanho muito grande, formatação da mensagem inválida ou rota inválida) The server cannot or will not process the request due to an apparent client error (e.g., malformed request syntax, size too large, invalid request message framing, or deceptive request routing)
+    remediation: Review request format and syntax
+  - status: 404
+    title: Not Found
+    type: QIT000404
+    description: O resource solicitado não pôde ser encontrado, mas pode estar disponível no futuro. Requests subsequentes do cliente são permitidos The requested resource could not be found but may be available in the future. Subsequent requests by the client are permissible
+    remediation: Check resource URL and availability
+  - status: 500
+    title: Internal Error
+    type: QIT000500
+    description: Um erro interno aconteceu e está sendo investigado. An internal error has occurred and its being investigated.
+    remediation: Contact support if issue persists
+note: Partial error catalog from Lending-as-a-Service API. Full catalog includes 468+ specific errors for credit operations (COP) category.

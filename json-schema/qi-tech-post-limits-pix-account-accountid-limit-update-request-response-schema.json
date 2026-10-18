@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/qi-tech/main/json-schema/qi-tech-post-limits-pix-account-accountid-limit-update-request-response-schema.json",
+  "title": "PostLimitsPixAccountAccountidLimitUpdateRequestResponse",
+  "x-generated": "2026-10-18",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/qi-tech-openapi-generated.yml#/components/schemas/PostLimitsPixAccountAccountidLimitUpdateRequestResponse",
+  "type": "object",
+  "properties": {
+    "limit_update_requests": {
+      "type": "array",
+      "description": "Lista com todas as modificações realizadas"
+    },
+    "limit_update_request_id": {
+      "type": "string",
+      "description": "Identificador único da Proposta de Modificação de Limite"
+    },
+    "analysis_status": {
+      "type": "string",
+      "description": "Enumerador do analysis_status da proposta"
+    },
+    "client_notification_status": {
+      "type": "string",
+      "description": "Enumerador do client_notification_status da proposta"
+    },
+    "limit_update_request_status": {
+      "type": "string",
+      "description": "Enumerador do limit_update_request_status da proposta"
+    },
+    "limit_update_request_type": {
+      "type": "string",
+      "description": "Enumerador do limit_update_request_type da proposta"
+    },
+    "event_date": {
+      "type": "string",
+      "description": "Data e hora da criação da Proposta de Modificação de Limite (ISO 8601)"
+    }
+  }
+}

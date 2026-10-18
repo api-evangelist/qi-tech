@@ -1,23 +1,237 @@
 aid: qi-tech
+
 name: QI Tech
-description: 'QI Tech is a company surfaced via the API Evangelist harvest backlog (source: kin-score-markets)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'QI Tech (legal entity on its docs: QI Sociedade de Crédito Direto S.A.) is a Brazilian financial-infrastructure company offering
+  regulated APIs to build financial products: Lending as a Service (debt issuance, simulation, formalization, payroll-deductible credit), Banking
+  as a Service (digital accounts, Pix, TED, boletos, escrow accounts), Risk Solutions (KYC, onboarding, antifraud, credit analysis, SCR) and investment
+  fund administration and custody (FIDC, DTVM). Its developer documentation at docs.qitech.com.br covers API key exchange, authentication, webhooks
+  and an API playground.'
+
+image: https://qitech.com.br/covers/qi-tech-infraestrutura-financeira-baas-laas-fidc.png
+
 url: https://raw.githubusercontent.com/api-evangelist/qi-tech/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:kin-score-markets
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-18 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-18'
+
 modified: '2026-10-18'
+
 tags:
 - Company
-apis: []
+- Fintech
+- Banking as a Service
+- Lending
+- Payments
+- Pix
+- KYC
+- Fraud Prevention
+- Fund Administration
+- Brazil
+tags_raw:
+- Company
+- Fintech
+- Banking as a Service
+- Lending
+- Payments
+- Pix
+- KYC
+- Antifraud
+- Fund Administration
+- Brazil
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Plans
+  url: plans/qi-tech-plans-pricing.yml
+- type: Spectral
+  url: rules/qi-tech-rules.yml
+- type: JSONLD
+  url: json-ld/qi-tech-context.jsonld
+- type: Vocabulary
+  url: vocabulary/qi-tech-vocabulary.yml
+- type: DataModel
+  url: data-model/qi-tech-data-model.yml
+- type: Conventions
+  url: conventions/qi-tech-conventions.yml
+- type: Authentication
+  url: authentication/qi-tech-authentication.yml
+- type: Deprecation
+  url: lifecycle/qi-tech-lifecycle.yml
+- type: Lifecycle
+  url: lifecycle/qi-tech-lifecycle.yml
+- type: ErrorCatalog
+  url: errors/qi-tech-problem-types.yml
+- type: Conformance
+  url: conformance/qi-tech-conformance.yml
+- type: LLMsTxt
+  url: llms/qi-tech-llms.txt
+- type: Hosts
+  url: hosts/qi-tech-hosts.yml
+- type: IntegrationEdges
+  url: integrations/qi-tech-integration-edges.yml
+- type: Vendors
+  url: vendors/qi-tech-vendors.yml
+- type: DomainSecurity
+  url: security/qi-tech-domain-security.yml
 - type: Website
   url: https://qitech.com.br
+- type: Documentation
+  url: https://docs.qitech.com.br/
+- type: APIReference
+  url: https://docs.qitech.com.br/documentation/introducao_api_reference
+- type: GettingStarted
+  url: https://docs.qitech.com.br/documentation/primeiros_passos/inicio
+- type: Playground
+  url: https://docs.qitech.com.br/playground
+- type: Support
+  url: https://qitech.com.br/central-de-ajuda/
+- type: Contact
+  url: https://qitech.com.br/contato/
+- type: Blog
+  url: https://qitech.blog/
+- type: Newsroom
+  url: https://qitech.com.br/newsroom/
+- type: PrivacyPolicy
+  url: https://qitech.com.br/politica-de-privacidade/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/qi-tech/
+- type: YouTube
+  url: https://www.youtube.com/@qitechoficial/videos
+
+apis:
+- aid: qi-tech:banking-and-lending-api
+  name: QI Tech Banking and Lending as a Service API
+  description: 'REST API for Banking as a Service (digital and escrow accounts, Pix, TED, boletos, cards, DDA) and Lending as a Service (debt
+    issuance, simulation, formalization), served from the shared BaaS/LaaS host per the docs. Production and sandbox hosts are stated in the host
+    table at https://docs.qitech.com.br/documentation/introducao_api_reference (sandbox: https://api-auth.sandbox.qitech.app). QI Tech publishes
+    no machine-readable contract (no OpenAPI/AsyncAPI/GraphQL found on the docs or API hosts).'
+  humanURL: https://docs.qitech.com.br/documentation/baas/primeiros_passos/inicio
+  baseURL: https://api-auth.qitech.app
+  tags:
+  - Fintech
+  - Brazil
+  properties:
+  - type: Documentation
+    url: https://docs.qitech.com.br/documentation/baas/primeiros_passos/inicio
+  - type: APIReference
+    url: https://docs.qitech.com.br/documentation/introducao_api_reference
+- aid: qi-tech:risk-solutions-api
+  name: QI Tech Risk Solutions (CaaS) API
+  description: 'REST API for Risk Solutions: onboarding, OCR, face recognition, device scan and Pix limits. Production and sandbox hosts are stated
+    in the host table at https://docs.qitech.com.br/documentation/introducao_api_reference (sandbox: https://api.sandbox.caas.qitech.app). QI
+    Tech publishes no machine-readable contract (no OpenAPI/AsyncAPI/GraphQL found on the docs or API hosts).'
+  humanURL: https://docs.qitech.com.br/documentation/caas/onboarding/introduction
+  baseURL: https://api.caas.qitech.app
+  tags:
+  - Fintech
+  - Brazil
+  properties:
+  - type: Documentation
+    url: https://docs.qitech.com.br/documentation/caas/onboarding/introduction
+  - type: APIReference
+    url: https://docs.qitech.com.br/documentation/introducao_api_reference
+- aid: qi-tech:certifiqi-api
+  name: QI Tech CertifiQI API
+  description: 'REST API for CertifiQI, the QI Tech platform for signing documents with ICP-Brasil certificates (CAdES p7s and PAdES PDF signatures)
+    at high volume. Production and sandbox hosts are stated in the host table at https://docs.qitech.com.br/documentation/introducao_api_reference
+    (sandbox: https://api.sandbox.certifiqi.com.br). QI Tech publishes no machine-readable contract (no OpenAPI/AsyncAPI/GraphQL found on the
+    docs or API hosts).'
+  humanURL: https://docs.qitech.com.br/documentation/certifiqi/inicio
+  baseURL: https://api.certifiqi.com.br
+  tags:
+  - Fintech
+  - Brazil
+  properties:
+  - type: Documentation
+    url: https://docs.qitech.com.br/documentation/certifiqi/inicio
+  - type: APIReference
+    url: https://docs.qitech.com.br/documentation/introducao_api_reference
+- aid: qi-tech:insurance-api
+  name: QI Tech Insurance as a Service API
+  description: 'REST API for Insurance as a Service products. Production and sandbox hosts are stated in the host table at https://docs.qitech.com.br/documentation/introducao_api_reference
+    (sandbox: https://api.sandbox.insurance.qitech.app). QI Tech publishes no machine-readable contract (no OpenAPI/AsyncAPI/GraphQL found on
+    the docs or API hosts).'
+  humanURL: https://docs.qitech.com.br/documentation/seguros/introducao/inicio
+  baseURL: https://api.insurance.qitech.app
+  tags:
+  - Fintech
+  - Brazil
+  properties:
+  - type: Documentation
+    url: https://docs.qitech.com.br/documentation/seguros/introducao/inicio
+  - type: APIReference
+    url: https://docs.qitech.com.br/documentation/introducao_api_reference
+- aid: qi-tech:qi-tech-api
+  name: QI Tech API
+  description: 'QI Tech API as documented publicly: 23 operations. Contract generated from the documentation by API Evangelist (2026-10-18); not
+
+    the provider''s own document.'
+  humanURL: https://docs.qitech.com.br/documentation/caas/ocr/api/send_image
+  baseURL: https://api.caas.qitech.app
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/qi-tech-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/qi-tech-post-limits-pix-account-accountid-limit-update-request-response-schema.json
+  - type: JSONSchema
+    url: json-schema/qi-tech-post-limits-pix-account-accountid-recipient-list-recipient-response-schema.json
+  - type: JSONSchema
+    url: json-schema/qi-tech-post-limits-pix-account-request-schema.json
+  - type: JSONSchema
+    url: json-schema/qi-tech-post-limits-pix-account-accountid-limit-update-request-request-schema.json
+  - type: JSONSchema
+    url: json-schema/qi-tech-post-onboarding-legal-person-request-schema.json
+  - type: JSONSchema
+    url: json-schema/qi-tech-post-onboarding-natural-person-request-schema.json
+
+x-coverage:
+  state: covered
+  reason: identity-verified
+  detail: Website qitech.com.br verified (title and docs footer name QI Tech). github.com/qitech belongs to an unrelated individual and was NOT
+    recorded. No Terms of Service, Pricing, SignUp, Roadmap or Postman page was found linked from the site.
+  evidence:
+  - url: https://qitech.com.br
+    status: 200
+  - url: https://docs.qitech.com.br/
+    status: 200
+  - url: https://docs.qitech.com.br/documentation/introducao_api_reference
+    status: 200
+  - url: https://docs.qitech.com.br/documentation/primeiros_passos/inicio
+    status: 200
+  - url: https://docs.qitech.com.br/playground
+    status: 200
+  - url: https://qitech.com.br/central-de-ajuda/
+    status: 200
+  - url: https://qitech.com.br/contato/
+    status: 200
+  - url: https://qitech.blog/
+    status: 200
+  - url: https://qitech.com.br/newsroom/
+    status: 200
+  - url: https://qitech.com.br/politica-de-privacidade/
+    status: 200
+  - url: https://www.linkedin.com/company/qi-tech/
+    status: 200
+  - url: https://github.com/qitech
+    status: 200
+x-enrichment:
+  date: '2026-10-18'
+  status: enriched
+  artifacts_added: 35
+  pass: modular-v1
+  engine: identity=anthropic,contract=anthropic,surfaces=anthropic,docs=deepseek,regulatory=anthropic

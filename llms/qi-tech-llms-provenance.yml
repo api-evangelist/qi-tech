@@ -1,0 +1,6 @@
+generated: '2026-10-18'
+method: probed
+generator: harvest-llms.py
+source: https://conteudo.qitech.com.br/llms.txt
+bytes: 3639
+note: saved verbatim; the provider's own document

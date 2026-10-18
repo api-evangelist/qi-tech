@@ -1,0 +1,24 @@
+generated: '2026-10-18'
+method: searched
+source: https://docs.qitech.com.br/documentation/primeiros_passos/teste_de_autenticacao/teste_de_autenticacao_v2
+docs: https://docs.qitech.com.br/documentation/primeiros_passos/teste_de_autenticacao/teste_de_autenticacao_v2
+schemes:
+  - type: jwt
+    name: JWT Authentication
+    description: JSON Web Token authentication using ES512 algorithm with private key signing
+    location: header
+    header: Authorization
+    format: Bearer {token}
+    scopes: []
+    docs: https://docs.qitech.com.br/documentation/primeiros_passos/teste_de_autenticacao/teste_de_autenticacao_v2
+    evidence_url: https://docs.qitech.com.br/documentation/primeiros_passos/teste_de_autenticacao/teste_de_autenticacao_v2
+  - type: apiKey
+    name: API Client Key
+    description: API client key used for key exchange and token generation
+    location: header
+    header: API-CLIENT-KEY
+    format: {api_client_key}
+    scopes: []
+    docs: https://docs.qitech.com.br/documentation/primeiros_passos/troca_de_chaves
+    evidence_url: https://docs.qitech.com.br/documentation/primeiros_passos/troca_de_chaves
+note: Authentication involves key exchange to obtain API-CLIENT-KEY, then JWT signing with ES512 algorithm using private key. Code examples provided in Python, PHP, Node.js, Java, C#.

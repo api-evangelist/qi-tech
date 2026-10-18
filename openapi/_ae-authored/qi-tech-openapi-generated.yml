@@ -1,0 +1,773 @@
+openapi: 3.1.0
+info:
+  title: QI Tech API
+  version: '2026-10-18'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-18: 23 operation(s) read from 18 public documentation page(s) (each
+    operation names its page in x-source). This is not the provider''s published contract; QI Tech has published no machine-readable contract
+    that the pipeline could find. Engine: anthropic.'
+  x-evidence-tiers:
+    code-example: 11
+    documentation: 12
+    pages-with-code: 9
+    pages-read: 18
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-18'
+  x-generator: generate-contract-from-docs.py
+  x-engine: anthropic
+  x-sources:
+  - https://docs.qitech.com.br/documentation/caas/ocr/api/send_image
+  - https://docs.qitech.com.br/documentation/caas/face_recognition/api/image
+  - https://docs.qitech.com.br/documentation/caas/device_scan/api/authentication
+  - https://docs.qitech.com.br/documentation/caas/face_recognition/api/authentication
+  - https://docs.qitech.com.br/documentation/caas/face_recognition/api/face_registration
+  - https://docs.qitech.com.br/documentation/escrituracao/amortizacao-extraordinaria/endpoints/consultar-amortizacao
+  - https://docs.qitech.com.br/documentation/baas/primeiros_passos/teste_de_autenticacao/baas_endpoints_de_teste
+  - https://docs.qitech.com.br/documentation/caas/onboarding/sdk_integration
+  - https://docs.qitech.com.br/documentation/caas/onboarding/introduction
+  - https://docs.qitech.com.br/documentation/baas/primeiros_passos/teste_de_autenticacao/baas_possiveis_erros
+  - https://docs.qitech.com.br/documentation/baas/primeiros_passos/teste_de_autenticacao/teste_de_autenticacao_v2
+  - https://docs.qitech.com.br/documentation/baas/primeiros_passos/teste_de_autenticacao/teste_de_autenticacao_completo
+  - https://docs.qitech.com.br/documentation/baas/primeiros_passos/teste_de_autenticacao/possiveis_erros
+  - https://docs.qitech.com.br/documentation/certifiqi/upload_documentos_pdf
+  - https://docs.qitech.com.br/documentation/caas/limits/introduction
+  - https://docs.qitech.com.br/documentation/caas/limits/limit_registration
+  - https://docs.qitech.com.br/documentation/caas/limits/recipient_list
+  - https://docs.qitech.com.br/documentation/caas/banking/introduction
+servers:
+- url: https://api.caas.qitech.app
+paths:
+  /:
+    get:
+      operationId: get
+      tags:
+      - Api
+      summary: GET /
+      x-source: https://docs.qitech.com.br/documentation/caas/banking/introduction
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl. Com isso você possui exemplos para poder adaptar adequadamente à linguagem de programação da sua preferência. \n Problemas?\
+          \ ​ \n Nós não somos uma companhia que se esconde atrás de uma API! Entre em contato com o nosso suporte e nós responderemos o mais\
+          \ rápido possível. Fique à vontade para nos ligar caso deseje uma resposta rápida! \n Adoramos Feedback ​ \n Mesmo que você já tenha\
+          \ resolvido o s"
+  /device_scan/token:
+    post:
+      operationId: post_device_scan_token
+      tags:
+      - Device Scan
+      summary: POST /device_scan/token
+      x-source: https://docs.qitech.com.br/documentation/caas/device_scan/api/authentication
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostDeviceScanTokenRequest'
+      responses:
+        '201':
+          description: Success (shape read from the example response on the page)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostDeviceScanTokenResponse'
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST \"https://d.viewpkg.com/device_scan/token\" \\ -H \"Authorization: EXAMPLE_API_KEY\" \\ -H \"Content-Type: application/json\"\
+          \ \\ -d '{ \"session_id\": \"unique_session_identifier\" }' \n Endpoints \n Ambiente URL Sandbox https://d.sandbox.viewpkg.com/device_scan/token\
+          \ Produção https://d.viewpkg.com/device_scan/token \n Detalhes da Requisição \n Campo Tipo Obrigatório Descrição session_id string Sim\
+          \ Id"
+  /document:
+    get:
+      operationId: get_document
+      tags:
+      - Document
+      summary: GET /document
+      x-source: https://docs.qitech.com.br/documentation/certifiqi/upload_documentos_pdf
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl --location ''https://api.certifiqi.com.br/document'' \ --header ''x-api-token: chave de api'' \ --form ''file=@"/seu_arquivo.pdf"''
+          \ --form ''endorsement_page="true"'' \ --form ''endorser_name="Endorser"'' \ --form ''endorser_document_number="123456789112"'' \ --form
+          ''receiver_name="Receiver"'' \ --form ''receiver_document_number="123456789113"'' \ --form ''document_type="Termo de Cessão"'' \ --form
+          ''documen'
+  /face_recognition/image/{imageKey}:
+    get:
+      operationId: get_face_recognition_image_imageKey
+      tags:
+      - Face Recognition
+      summary: Retrieve the metadata of an uploaded image.
+      x-source: https://docs.qitech.com.br/documentation/caas/face_recognition/api/image
+      parameters:
+      - name: imageKey
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetFaceRecognitionImageImagekeyResponse'
+      x-evidence:
+        kind: documentation
+  /face_recognition/image/{imageKey}/cropped_file:
+    get:
+      operationId: get_face_recognition_image_imageKey_cropped_file
+      tags:
+      - Face Recognition
+      summary: Retrieve the processed facial image containing only the face used in facial recognition routines.
+      x-source: https://docs.qitech.com.br/documentation/caas/face_recognition/api/image
+      parameters:
+      - name: imageKey
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /face_recognition/image/{imageKey}/file:
+    get:
+      operationId: get_face_recognition_image_imageKey_file
+      tags:
+      - Face Recognition
+      summary: Retrieve the uploaded facial image.
+      x-source: https://docs.qitech.com.br/documentation/caas/face_recognition/api/image
+      parameters:
+      - name: imageKey
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /face_recognition/registration:
+    post:
+      operationId: post_face_recognition_registration
+      tags:
+      - Face Recognition
+      summary: POST /face_recognition/registration
+      x-source: https://docs.qitech.com.br/documentation/caas/face_recognition/api/authentication
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl -X POST \"https://api.caas.qitech.app/face_recognition/registration\" \\ -H \"Authorization: EXAMPLE_API_KEY\" \\ -H \"\
+          Content-Type: application/json\" \n Atenção Você deve substituir EXAMPLE_API_KEY pela API Key recebida do suporte. \n Integrações com\
+          \ SDK Os fluxos de Web e Mobile não usam a API Key diretamente no dispositivo: eles usam um client_session_key temporário, gerado no\
+          \ seu backend. Esse flu"
+  /face_recognition/registration/document_number/{documentNumber}:
+    get:
+      operationId: get_face_recognition_registration_document_number_documentNumber
+      tags:
+      - Face Recognition
+      summary: Recupera registro pelo número do documento
+      x-source: https://docs.qitech.com.br/documentation/caas/face_recognition/api/face_registration
+      parameters:
+      - name: documentNumber
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetFaceRecognitionRegistrationDocumentNumberDocumentnumberRe'
+      x-evidence:
+        kind: documentation
+  /face_recognition/registration/{registrationKey}:
+    get:
+      operationId: get_face_recognition_registration_registrationKey
+      tags:
+      - Face Recognition
+      summary: Recupera registro pela chave
+      x-source: https://docs.qitech.com.br/documentation/caas/face_recognition/api/face_registration
+      parameters:
+      - name: registrationKey
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetFaceRecognitionRegistrationRegistrationkeyResponse'
+      x-evidence:
+        kind: documentation
+  /limits_pix:
+    get:
+      operationId: get_limits_pix
+      tags:
+      - Limits Pix
+      summary: GET /limits_pix
+      x-source: https://docs.qitech.com.br/documentation/caas/limits/introduction
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl. Com isso você possui exemplos para poder adaptar adequadamente à linguagem de programação da sua preferência. \n Problemas?\
+          \ ​ \n Nós não somos uma companhia que se esconde atrás de uma API! Entre em contato com o nosso suporte e nós responderemos o mais\
+          \ rápido possível. Fique à vontade para nos ligar caso deseje uma resposta rápida! \n Adoramos Feedback ​ \n Mesmo que você já tenha\
+          \ resolvido o s"
+  /limits_pix/account:
+    post:
+      operationId: post_limits_pix_account
+      tags:
+      - Limits Pix
+      summary: Cadastro de um novo limite PIX.
+      x-source: https://docs.qitech.com.br/documentation/caas/limits/limit_registration
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostLimitsPixAccountRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /limits_pix/account/{accountId}/limit_update_request:
+    post:
+      operationId: post_limits_pix_account_accountId_limit_update_request
+      tags:
+      - Limits Pix
+      summary: Solicitar uma modificação de um limite PIX.
+      x-source: https://docs.qitech.com.br/documentation/caas/limits/limit_registration
+      parameters:
+      - name: accountId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostLimitsPixAccountAccountidLimitUpdateRequestRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostLimitsPixAccountAccountidLimitUpdateRequestResponse'
+      x-evidence:
+        kind: documentation
+  /limits_pix/account/{accountId}/recipient_list:
+    post:
+      operationId: post_limits_pix_account_accountId_recipient_list
+      tags:
+      - Limits Pix
+      summary: Creating a recipient list with differentiated limits according to Central Bank PIX regulations.
+      x-source: https://docs.qitech.com.br/documentation/caas/limits/recipient_list
+      parameters:
+      - name: accountId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostLimitsPixAccountAccountidRecipientListRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostLimitsPixAccountAccountidRecipientListResponse'
+      x-evidence:
+        kind: documentation
+  /limits_pix/account/{accountId}/recipient_list/limit_update_request:
+    post:
+      operationId: post_limits_pix_account_accountId_recipient_list_limit_update_request
+      tags:
+      - Limits Pix
+      summary: Requesting to change the limits of a recipient list for a given account.
+      x-source: https://docs.qitech.com.br/documentation/caas/limits/recipient_list
+      parameters:
+      - name: accountId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostLimitsPixAccountAccountidRecipientListLimitUpdateRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostLimitsPixAccountAccountidRecipientListLimitUpdateRequest2'
+      x-evidence:
+        kind: documentation
+  /limits_pix/account/{accountId}/recipient_list/recipient:
+    post:
+      operationId: post_limits_pix_account_accountId_recipient_list_recipient
+      tags:
+      - Limits Pix
+      summary: Adding a new recipient to a previously created recipient list.
+      x-source: https://docs.qitech.com.br/documentation/caas/limits/recipient_list
+      parameters:
+      - name: accountId
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostLimitsPixAccountAccountidRecipientListRecipientRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostLimitsPixAccountAccountidRecipientListRecipientResponse'
+      x-evidence:
+        kind: documentation
+  /limits_pix/account/{accountId}/recipient_list/recipient/{recipientId}:
+    delete:
+      operationId: delete_limits_pix_account_accountId_recipient_list_recipient_recipientId
+      tags:
+      - Limits Pix
+      summary: Removing a specific recipient from an account.
+      x-source: https://docs.qitech.com.br/documentation/caas/limits/recipient_list
+      parameters:
+      - name: accountId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: recipientId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /ocr/image/{imageKey}/file:
+    get:
+      operationId: get_ocr_image_imageKey_file
+      tags:
+      - Ocr
+      summary: Recuperar um documento enviado anteriormente.
+      x-source: https://docs.qitech.com.br/documentation/caas/ocr/api/send_image
+      parameters:
+      - name: imageKey
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: Authorization
+        in: header
+        required: true
+        schema:
+          type: string
+        description: API key para autenticação
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetOcrImageImagekeyFileResponse'
+      x-evidence:
+        kind: documentation
+  /onboarding:
+    get:
+      operationId: get_onboarding
+      tags:
+      - Onboarding
+      summary: GET /onboarding
+      x-source: https://docs.qitech.com.br/documentation/caas/onboarding/introduction
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl. \n Usa os SDKs de biometria, OCR ou Device Scan? As chaves devolvidas pelos SDKs entram em lugares diferentes em PF e\
+          \ PJ. Veja Dados do SDK . \n Problemas? ​ \n Nós não somos uma companhia que se esconde atrás de uma API! Entre em contato com o nosso\
+          \ suporte e nós responderemos o mais rápido possível. Fique à vontade para nos ligar caso deseje uma resposta rápida! \n Adoramos Feedback\
+          \ ​ \n Mesmo "
+  /onboarding/legal_person:
+    post:
+      operationId: post_onboarding_legal_person
+      tags:
+      - Onboarding
+      summary: POST /onboarding/legal_person
+      x-source: https://docs.qitech.com.br/documentation/caas/onboarding/sdk_integration
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostOnboardingLegalPersonRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /onboarding/natural_person:
+    post:
+      operationId: post_onboarding_natural_person
+      tags:
+      - Onboarding
+      summary: POST /onboarding/natural_person
+      x-source: https://docs.qitech.com.br/documentation/caas/onboarding/sdk_integration
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostOnboardingNaturalPersonRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /onboarding/{tipo}/{id}:
+    get:
+      operationId: get_onboarding_tipo_id
+      tags:
+      - Onboarding
+      summary: Queries the current state and the history of events.
+      x-source: https://docs.qitech.com.br/documentation/caas/onboarding/introduction
+      parameters:
+      - name: tipo
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    put:
+      operationId: put_onboarding_tipo_id
+      tags:
+      - Onboarding
+      summary: Informs the outcome on your platform (client_status) and retrofeeds the models.
+      x-source: https://docs.qitech.com.br/documentation/caas/onboarding/introduction
+      parameters:
+      - name: tipo
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PutOnboardingTipoIdRequest'
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /test/{apiKey}:
+    post:
+      operationId: post_test_apiKey
+      tags:
+      - Test
+      summary: Teste de autenticação via método POST.
+      x-source: https://docs.qitech.com.br/documentation/baas/primeiros_passos/teste_de_autenticacao/baas_endpoints_de_teste
+      parameters:
+      - name: apiKey
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostTestApikeyRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostTestApikeyResponse'
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    PostDeviceScanTokenRequest:
+      type: object
+      properties:
+        session_id:
+          type: string
+    PostDeviceScanTokenResponse:
+      type: object
+      properties:
+        token:
+          type: string
+    GetFaceRecognitionImageImagekeyResponse:
+      type: object
+      properties:
+        image_key:
+          type: string
+        file_size:
+          type: integer
+        width_px:
+          type: integer
+        height_px:
+          type: integer
+        created_at:
+          type: string
+    GetFaceRecognitionRegistrationDocumentNumberDocumentnumberRe:
+      type: object
+      properties:
+        registration_key:
+          type: string
+          description: Chave do registro do rosto
+    GetFaceRecognitionRegistrationRegistrationkeyResponse:
+      type: object
+      properties:
+        registration_key:
+          type: string
+          description: Chave do registro do rosto
+    PostLimitsPixAccountRequest:
+      type: object
+      properties:
+        account_id:
+          type: string
+          description: Identificador único da conta. É essencial que este número seja único para cada requisição
+        registration_date:
+          type: string
+          description: Data e hora do cadastro (ISO 8601)
+        limit:
+          type: object
+          description: Objeto do tipo limit contendo withdraw, change, transaction_natural_person e transaction_legal_person
+      required:
+      - account_id
+      - registration_date
+      - limit
+    PostLimitsPixAccountAccountidLimitUpdateRequestRequest:
+      type: object
+      properties:
+        withdraw:
+          type: object
+          description: Limites para modalidade PIX Saque
+        change:
+          type: object
+          description: Limites para modalidade PIX Troco
+        transaction_natural_person:
+          type: object
+          description: Limites para modalidade PIX transacional para pessoas físicas
+        transaction_legal_person:
+          type: object
+          description: Limites para modalidade PIX transacional para pessoas jurídicas
+    PostLimitsPixAccountAccountidLimitUpdateRequestResponse:
+      type: object
+      properties:
+        limit_update_requests:
+          type: array
+          description: Lista com todas as modificações realizadas
+        limit_update_request_id:
+          type: string
+          description: Identificador único da Proposta de Modificação de Limite
+        analysis_status:
+          type: string
+          description: Enumerador do analysis_status da proposta
+        client_notification_status:
+          type: string
+          description: Enumerador do client_notification_status da proposta
+        limit_update_request_status:
+          type: string
+          description: Enumerador do limit_update_request_status da proposta
+        limit_update_request_type:
+          type: string
+          description: Enumerador do limit_update_request_type da proposta
+        event_date:
+          type: string
+          description: Data e hora da criação da Proposta de Modificação de Limite (ISO 8601)
+    PostLimitsPixAccountAccountidRecipientListRequest:
+      type: object
+      properties:
+        limit:
+          type: object
+          description: Object containing transaction limit details with daytime and nighttime periods
+      required:
+      - limit
+    PostLimitsPixAccountAccountidRecipientListResponse:
+      type: object
+      properties:
+        event_date:
+          type: string
+          description: Date and time of recipient list creation
+    PostLimitsPixAccountAccountidRecipientListLimitUpdateRequest:
+      type: object
+      properties:
+        limit:
+          type: object
+          description: Object containing updated transaction limit details with daytime and nighttime periods
+      required:
+      - limit
+    PostLimitsPixAccountAccountidRecipientListLimitUpdateRequest2:
+      type: object
+      properties:
+        recipient_list_limit_update_requests:
+          type: array
+          description: List of all modifications made, separated by period
+    PostLimitsPixAccountAccountidRecipientListRecipientRequest:
+      type: object
+      properties:
+        document_number:
+          type: string
+          description: Document number of the recipient to be added
+      required:
+      - document_number
+    PostLimitsPixAccountAccountidRecipientListRecipientResponse:
+      type: object
+      properties:
+        recipient_id:
+          type: string
+          description: Unique identifier of the recipient
+        analysis_status:
+          type: string
+          description: Enumerator of the analysis status of the proposal
+        client_notification_status:
+          type: string
+          description: Enumerator of the client notification status of the proposal
+        recipient_status:
+          type: string
+          description: Enumerator of the recipient status of the proposal
+        event_date:
+          type: string
+          description: Date and time of recipient creation
+    GetOcrImageImagekeyFileResponse:
+      type: object
+      properties:
+        file:
+          type: string
+          description: A imagem do documento enviada
+    PostOnboardingLegalPersonRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        registration_date:
+          type: string
+        document_number:
+          type: string
+        legal_name:
+          type: string
+        source:
+          type: object
+        documents:
+          type: object
+        legal_representatives:
+          type: array
+    PostOnboardingNaturalPersonRequest:
+      type: object
+      properties:
+        id:
+          type: string
+        registration_date:
+          type: string
+        document_number:
+          type: string
+        name:
+          type: string
+        source:
+          type: object
+        face:
+          type: object
+        documents:
+          type: object
+    PutOnboardingTipoIdRequest:
+      type: object
+      properties:
+        client_status:
+          type: string
+      required:
+      - client_status
+    PostTestApikeyRequest:
+      type: object
+      properties:
+        name:
+          type: string
+      required:
+      - name
+    PostTestApikeyResponse:
+      type: object
+      properties:
+        name:
+          type: string
+        success:
+          type: string
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: Authorization
+security:
+- apiKey: []
+tags:
+- name: Api
+- name: Device Scan
+- name: Document
+- name: Face Recognition
+- name: Limits Pix
+- name: Ocr
+- name: Onboarding
+- name: Test

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/qi-tech/main/json-schema/qi-tech-post-onboarding-legal-person-request-schema.json",
+  "title": "PostOnboardingLegalPersonRequest",
+  "x-generated": "2026-10-18",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/qi-tech-openapi-generated.yml#/components/schemas/PostOnboardingLegalPersonRequest",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "registration_date": {
+      "type": "string"
+    },
+    "document_number": {
+      "type": "string"
+    },
+    "legal_name": {
+      "type": "string"
+    },
+    "source": {
+      "type": "object"
+    },
+    "documents": {
+      "type": "object"
+    },
+    "legal_representatives": {
+      "type": "array"
+    }
+  }
+}

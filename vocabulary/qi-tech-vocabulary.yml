@@ -1,0 +1,151 @@
+generated: '2026-10-18'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/_ae-authored/qi-tech-openapi-generated.yml
+vocabulary:
+  name: QI Tech Domain Vocabulary
+  description: 'Terms declared by QI Tech''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-10-18'
+  terms:
+  - term: PostDeviceScanTokenRequest
+    definition: 'Object declared by the contract with fields: session_id.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/qi-tech-openapi-generated.yml#/components/schemas/PostDeviceScanTokenRequest
+  - term: PostDeviceScanTokenResponse
+    definition: 'Object declared by the contract with fields: token.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/qi-tech-openapi-generated.yml#/components/schemas/PostDeviceScanTokenResponse
+  - term: GetFaceRecognitionImageImagekeyResponse
+    definition: 'Object declared by the contract with fields: image_key, file_size, width_px, height_px, created_at.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/qi-tech-openapi-generated.yml#/components/schemas/GetFaceRecognitionImageImagekeyResponse
+  - term: GetFaceRecognitionRegistrationDocumentNumberDocumentnumberRe
+    definition: 'Object declared by the contract with fields: registration_key.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/qi-tech-openapi-generated.yml#/components/schemas/GetFaceRecognitionRegistrationDocumentNumberDocumentnumberRe
+  - term: GetFaceRecognitionRegistrationRegistrationkeyResponse
+    definition: 'Object declared by the contract with fields: registration_key.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/qi-tech-openapi-generated.yml#/components/schemas/GetFaceRecognitionRegistrationRegistrationkeyResponse
+  - term: PostLimitsPixAccountRequest
+    definition: 'Object declared by the contract with fields: account_id, registration_date, limit.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/qi-tech-openapi-generated.yml#/components/schemas/PostLimitsPixAccountRequest
+  - term: PostLimitsPixAccountAccountidLimitUpdateRequestRequest
+    definition: 'Object declared by the contract with fields: withdraw, change, transaction_natural_person, transaction_legal_person.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/qi-tech-openapi-generated.yml#/components/schemas/PostLimitsPixAccountAccountidLimitUpdateRequestRequest
+  - term: PostLimitsPixAccountAccountidLimitUpdateRequestResponse
+    definition: 'Object declared by the contract with fields: limit_update_requests, limit_update_request_id, analysis_status, client_notification_status,
+      limit_update_request_status, limit_update_request_type, event_date.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/qi-tech-openapi-generated.yml#/components/schemas/PostLimitsPixAccountAccountidLimitUpdateRequestResponse
+  - term: PostLimitsPixAccountAccountidRecipientListRequest
+    definition: 'Object declared by the contract with fields: limit.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/qi-tech-openapi-generated.yml#/components/schemas/PostLimitsPixAccountAccountidRecipientListRequest
+  - term: PostLimitsPixAccountAccountidRecipientListResponse
+    definition: 'Object declared by the contract with fields: event_date.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/qi-tech-openapi-generated.yml#/components/schemas/PostLimitsPixAccountAccountidRecipientListResponse
+  - term: PostLimitsPixAccountAccountidRecipientListLimitUpdateRequest
+    definition: 'Object declared by the contract with fields: limit.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/qi-tech-openapi-generated.yml#/components/schemas/PostLimitsPixAccountAccountidRecipientListLimitUpdateRequest
+  - term: PostLimitsPixAccountAccountidRecipientListLimitUpdateRequest2
+    definition: 'Object declared by the contract with fields: recipient_list_limit_update_requests.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/qi-tech-openapi-generated.yml#/components/schemas/PostLimitsPixAccountAccountidRecipientListLimitUpdateRequest2
+  - term: PostLimitsPixAccountAccountidRecipientListRecipientRequest
+    definition: 'Object declared by the contract with fields: document_number.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/qi-tech-openapi-generated.yml#/components/schemas/PostLimitsPixAccountAccountidRecipientListRecipientRequest
+  - term: PostLimitsPixAccountAccountidRecipientListRecipientResponse
+    definition: 'Object declared by the contract with fields: recipient_id, analysis_status, client_notification_status, recipient_status, event_date.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/qi-tech-openapi-generated.yml#/components/schemas/PostLimitsPixAccountAccountidRecipientListRecipientResponse
+  - term: GetOcrImageImagekeyFileResponse
+    definition: 'Object declared by the contract with fields: file.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/qi-tech-openapi-generated.yml#/components/schemas/GetOcrImageImagekeyFileResponse
+  - term: PostOnboardingLegalPersonRequest
+    definition: 'Object declared by the contract with fields: id, registration_date, document_number, legal_name, source, documents, legal_representatives.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/qi-tech-openapi-generated.yml#/components/schemas/PostOnboardingLegalPersonRequest
+  - term: PostOnboardingNaturalPersonRequest
+    definition: 'Object declared by the contract with fields: id, registration_date, document_number, name, source, face, documents.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/qi-tech-openapi-generated.yml#/components/schemas/PostOnboardingNaturalPersonRequest
+  - term: PutOnboardingTipoIdRequest
+    definition: 'Object declared by the contract with fields: client_status.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/qi-tech-openapi-generated.yml#/components/schemas/PutOnboardingTipoIdRequest
+  - term: PostTestApikeyRequest
+    definition: 'Object declared by the contract with fields: name.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/qi-tech-openapi-generated.yml#/components/schemas/PostTestApikeyRequest
+  - term: PostTestApikeyResponse
+    definition: 'Object declared by the contract with fields: name, success.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/qi-tech-openapi-generated.yml#/components/schemas/PostTestApikeyResponse
+  - term: Api
+    definition: 'Resource group in the contract; its operation GET /: GET /'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/qi-tech-openapi-generated.yml
+  - term: Device Scan
+    definition: 'Resource group in the contract; its operation POST /device_scan/token: POST /device_scan/token'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/qi-tech-openapi-generated.yml
+  - term: Document
+    definition: 'Resource group in the contract; its operation GET /document: GET /document'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/qi-tech-openapi-generated.yml
+  - term: Face Recognition
+    definition: 'Resource group in the contract; its operation GET /face_recognition/image/{imageKey}: Retrieve the metadata of an uploaded image.'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/qi-tech-openapi-generated.yml
+  - term: Limits Pix
+    definition: 'Resource group in the contract; its operation GET /limits_pix: GET /limits_pix'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/qi-tech-openapi-generated.yml
+  - term: Ocr
+    definition: 'Resource group in the contract; its operation GET /ocr/image/{imageKey}/file: Recuperar um documento enviado anteriormente.'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/qi-tech-openapi-generated.yml
+  - term: Onboarding
+    definition: 'Resource group in the contract; its operation GET /onboarding: GET /onboarding'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/qi-tech-openapi-generated.yml
+  - term: Test
+    definition: 'Resource group in the contract; its operation POST /test/{apiKey}: Teste de autenticação via método POST.'
+    tags:
+    - Resource Group
+    source: openapi/_ae-authored/qi-tech-openapi-generated.yml

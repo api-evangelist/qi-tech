@@ -1,0 +1,5 @@
+generated: '2026-10-18'
+method: none
+install: []
+commands: []
+note: No first-party CLI documented. Authentication examples provided in multiple programming languages (Python, PHP, Node.js, Java, C#) but no standalone CLI tool.

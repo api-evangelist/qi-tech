@@ -1,0 +1,57 @@
+generated: '2026-10-18'
+method: searched
+source: https://docs.qitech.com.br/documentation/introducao_api_reference
+authentication:
+  style: JWT with API key exchange
+  mechanism: ES512 algorithm with private key signing
+  key_exchange: Required before API usage
+  docs: https://docs.qitech.com.br/documentation/primeiros_passos/teste_de_autenticacao/teste_de_autenticacao_v2
+idempotency:
+  coverage: none
+  note: No idempotency mechanism documented in public documentation
+pagination:
+  style: offset-based
+  parameters:
+    - name: page
+      type: integer
+      description: Page number
+    - name: size
+      type: integer
+      description: Page size
+  response_fields:
+    - total_pages
+    - total_elements
+    - number_of_elements
+    - first
+    - last
+    - empty
+  docs: https://docs.qitech.com.br/documentation/emissao_de_divida/catalogo_de_erros_laas (QIT000010 error reference)
+error_envelope:
+  format: JSON with code and message fields
+  fields:
+    - code: Error code (e.g., QIT000001)
+    - message: Error description
+    - http_status: HTTP status code
+  docs: https://docs.qitech.com.br/documentation/emissao_de_divida/catalogo_de_erros_laas
+versioning:
+  policy: Not documented
+  headers: Not documented
+  url_versioning: Not documented
+request_id_tracing:
+  headers: Not documented
+rate_limit_signaling:
+  headers: Not documented
+reversibility:
+  coverage: partial
+  operations:
+    - operation: Refund
+      window: Not documented
+      docs: Not documented
+    - operation: Cancel
+      window: Not documented
+      docs: Not documented
+  note: Financial services APIs typically support reversibility operations (refunds, cancellations) but specific windows not documented in public docs
+dry_run_mode:
+  coverage: none
+  note: No dry-run mode documented
+note: Based on public documentation review. Some conventions may exist but are not documented publicly.

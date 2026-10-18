@@ -1,0 +1,30 @@
+generated: '2026-10-18'
+method: searched
+source: https://docs.qitech.com.br/documentation/introducao_api_reference
+standards:
+- id: jwt
+  conforms: true
+  evidence: JWT authentication with ES512 algorithm used for API authentication
+  evidence_url: https://docs.qitech.com.br/documentation/primeiros_passos/teste_de_autenticacao/teste_de_autenticacao_v2
+- id: rest
+  conforms: true
+  evidence: REST API architecture with JSON request/response format
+  evidence_url: https://docs.qitech.com.br/documentation/introducao_api_reference
+- id: brazilian-financial-regulations
+  conforms: true
+  evidence: Regulated financial institution authorized by Brazilian Central Bank (Banco Central do Brasil)
+  evidence_url: https://qitech.com.br/
+- id: openapi-3.1
+  conforms: true
+  evidence: the document declares 3.1.0
+- id: oauth2
+  conforms: false
+  evidence: 'securitySchemes: apiKey (apiKey)'
+- id: rfc9457
+  conforms: false
+  evidence: no response declares application/problem+json
+- id: idempotency
+  conforms: false
+  evidence: no idempotency key parameter on mutating operations
+note: QI Tech is a regulated financial institution in Brazil. Specific regulatory standards compliance (PCI DSS, SOC 2, ISO 27001) not documented
+  in public materials.

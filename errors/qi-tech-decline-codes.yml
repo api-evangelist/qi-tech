@@ -1,0 +1,4 @@
+generated: '2026-10-18'
+method: none
+decline_codes: []
+note: No decline codes documented for payment/authorization failures. Error catalog focuses on API validation and business logic errors rather than payment declines.

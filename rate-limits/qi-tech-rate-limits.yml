@@ -1,0 +1,6 @@
+generated: '2026-10-18'
+method: searched
+source: https://docs.qitech.com.br/documentation/introducao_api_reference
+name: QI Tech rate limits
+limits: []
+note: No rate limits documented in public documentation. Limits likely exist but are not published.

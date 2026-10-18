@@ -1,0 +1,4 @@
+generated: '2026-10-18'
+method: none
+scopes: []
+note: No OAuth scopes documented. Authentication uses JWT with API key exchange rather than OAuth.

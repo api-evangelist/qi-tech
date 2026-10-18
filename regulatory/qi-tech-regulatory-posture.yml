@@ -1,0 +1,59 @@
+generated: '2026-10-18'
+method: searched
+probe: true
+source: https://qitech.com.br/politica-de-privacidade/
+framework: LGPD (Lei Federal nº 13.709/2018, Brazil)
+language: pt-BR
+last_updated_on_page: '07/07/2025'
+signals:
+  data_subject_request:
+    url: https://qitech.com.br/politica-de-privacidade/
+    section: '10. Quais são seus direitos e como exercê-los?'
+    channel: qiajuda@qitech.com.br (plus a data-subject request form linked from the page)
+    rights_named: [confirmation of processing, access, correction, anonymisation/blocking/deletion, information on sharing, portability, consent revocation, objection, review of automated decisions, petition to the ANPD]
+    evidence:
+    - source: https://qitech.com.br/politica-de-privacidade/
+      http_status: 200
+      fetched: '2026-10-18'
+      quote: 'Solicitar portabilidade de dados, nos moldes de regulamentação da Autoridade Nacional de Proteção de Dados;'
+    - source: https://qitech.com.br/politica-de-privacidade/
+      http_status: 200
+      fetched: '2026-10-18'
+      quote: 'Solicitar a revisão de decisões tomadas de forma automática (sem participação humana), bem como solicitar o fornecimento de critérios e procedimentos adotados para a tomada dessas decisões; e'
+    - source: https://qitech.com.br/politica-de-privacidade/
+      http_status: 200
+      fetched: '2026-10-18'
+      quote: 'Nas hipóteses em que a QI Tech atuar como operador, o cliente final poderá exercer os direitos acima diretamente em face do Parceiro com o qual possui relacionamento, por meio dos canais por ele disponibilizados.'
+    note: >-
+      The LGPD notice enumerates the statutory data-subject rights (including portability and review of
+      automated decisions) and gives an email channel and request form. Where QI Tech acts as processor
+      (operador), end customers are pointed to the partner. No response SLA is stated.
+  data_retention:
+    url: https://qitech.com.br/politica-de-privacidade/
+    section: '6. Por quanto tempo armazenamos os dados pessoais?'
+    evidence:
+    - source: https://qitech.com.br/politica-de-privacidade/
+      http_status: 200
+      fetched: '2026-10-18'
+      quote: 'Os dados pessoais coletados no âmbito de nossos serviços são mantidos pelo período necessário para execução das finalidades descritas neste Aviso. Em alguns casos, as informações poderão ser mantidas por período complementar caso necessário para o cumprimento de obrigações legais e regulatórias ou para o resguardar o exercício de direitos.'
+    note: Purpose-bound retention with extension for legal/regulatory obligations; no concrete retention periods are published.
+  data_residency:
+    url: https://qitech.com.br/politica-de-privacidade/
+    section: '9. Com quem compartilhamos os dados pessoais? (Transferência internacional)'
+    evidence:
+    - source: https://qitech.com.br/politica-de-privacidade/
+      http_status: 200
+      fetched: '2026-10-18'
+      quote: 'Podemos transferir os dados pessoais para entidades localizadas fora do Brasil, para as seguintes finalidades: Armazenamento de dados em nuvem | Estados Unidos.'
+    note: >-
+      Discloses that personal data may leave Brazil for cloud storage in the United States. This is a
+      transfer disclosure, not a residency commitment; no in-country residency option is offered.
+  subprocessors:
+    url: https://qitech.com.br/politica-de-privacidade/
+    section: '9. Com quem compartilhamos os dados pessoais?'
+    evidence:
+    - source: https://qitech.com.br/politica-de-privacidade/
+      http_status: 200
+      fetched: '2026-10-18'
+      quote: 'Fornecedores, prestadores de serviços e parceiros comerciais que nos apoiam na operacionalização de nossas atividades comerciais, tais como fornecedores de tecnologia e bureau de crédito;'
+    note: Names categories of recipients only (technology suppliers, credit bureaus); no named subprocessor list is published on this page.

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/qi-tech/main/json-schema/qi-tech-post-limits-pix-account-accountid-limit-update-request-request-schema.json",
+  "title": "PostLimitsPixAccountAccountidLimitUpdateRequestRequest",
+  "x-generated": "2026-10-18",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/qi-tech-openapi-generated.yml#/components/schemas/PostLimitsPixAccountAccountidLimitUpdateRequestRequest",
+  "type": "object",
+  "properties": {
+    "withdraw": {
+      "type": "object",
+      "description": "Limites para modalidade PIX Saque"
+    },
+    "change": {
+      "type": "object",
+      "description": "Limites para modalidade PIX Troco"
+    },
+    "transaction_natural_person": {
+      "type": "object",
+      "description": "Limites para modalidade PIX transacional para pessoas físicas"
+    },
+    "transaction_legal_person": {
+      "type": "object",
+      "description": "Limites para modalidade PIX transacional para pessoas jurídicas"
+    }
+  }
+}

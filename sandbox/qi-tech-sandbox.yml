@@ -1,0 +1,41 @@
+generated: '2026-10-18'
+method: searched
+source: https://docs.qitech.com.br/documentation/introducao_api_reference
+description: Separate sandbox environment with fictional monetary values for development and testing
+docs: https://docs.qitech.com.br/documentation/introducao_api_reference
+environments:
+  - name: Sandbox
+    description: Development environment with fictional monetary values
+    base_url: Varies by service (see hosts table)
+    authentication: Same as production (JWT with API-CLIENT-KEY)
+    features:
+      - Fictional monetary values
+      - Same API version as production
+      - All endpoints available
+      - Test webhooks
+    restrictions:
+      - No real personal or corporate data allowed
+      - No real financial transactions
+  - name: Production
+    description: Live environment with real financial transactions
+    base_url: Varies by service (see hosts table)
+    authentication: JWT with API-CLIENT-KEY
+    features:
+      - Real financial transactions
+      - Real monetary values
+      - Production webhooks
+hosts:
+  - service: BaaS e LaaS
+    production: https://api-auth.qitech.app/
+    sandbox: https://api-auth.sandbox.qitech.app/
+  - service: CaaS (Risk Solutions)
+    production: https://api.caas.qitech.app/
+    sandbox: https://api.sandbox.caas.qitech.app/
+  - service: CertifiQI
+    production: https://api.certifiqi.com.br/
+    sandbox: https://api.sandbox.certifiqi.com.br/
+  - service: Insurance
+    production: https://api.insurance.qitech.app/
+    sandbox: https://api.sandbox.insurance.qitech.app/
+playground: https://docs.qitech.com.br/playground
+note: Sandbox environment is completely separate infrastructure from production. When updates occur in production, same updates are applied to sandbox. Sandbox created for developers to perform integrations before moving to production.

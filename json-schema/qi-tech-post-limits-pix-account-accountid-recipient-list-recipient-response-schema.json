@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/qi-tech/main/json-schema/qi-tech-post-limits-pix-account-accountid-recipient-list-recipient-response-schema.json",
+  "title": "PostLimitsPixAccountAccountidRecipientListRecipientResponse",
+  "x-generated": "2026-10-18",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/qi-tech-openapi-generated.yml#/components/schemas/PostLimitsPixAccountAccountidRecipientListRecipientResponse",
+  "type": "object",
+  "properties": {
+    "recipient_id": {
+      "type": "string",
+      "description": "Unique identifier of the recipient"
+    },
+    "analysis_status": {
+      "type": "string",
+      "description": "Enumerator of the analysis status of the proposal"
+    },
+    "client_notification_status": {
+      "type": "string",
+      "description": "Enumerator of the client notification status of the proposal"
+    },
+    "recipient_status": {
+      "type": "string",
+      "description": "Enumerator of the recipient status of the proposal"
+    },
+    "event_date": {
+      "type": "string",
+      "description": "Date and time of recipient creation"
+    }
+  }
+}

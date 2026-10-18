@@ -1,0 +1,75 @@
+generated: '2026-10-18'
+method: searched
+source:
+- https://zapier.com/apps/qi-tech/integrations
+- https://n8n.io/integrations/qi-tech/
+- https://composio.dev/toolkits/qi-tech
+- https://monid.ai/tools/qi-tech
+checked:
+- https://composio.dev/toolkits/qi-tech
+- https://docs.qitech.com.br/
+- https://monid.ai/tools/qi-tech
+- https://n8n.io/integrations/qi-tech/
+- https://qitech.com.br/
+- https://qitech.com.br/cases/
+- https://zapier.com/apps/qi-tech/integrations
+summary: null
+marketplace_apps: []
+edges:
+- partner: avelloz
+  partner_name: Avelloz
+  type: claimed
+  direction: provider-built
+  relationship: core-infrastructure
+  evidence: https://qitech.com.br/cases/avelloz/
+- partner: fazcred
+  partner_name: FAZCred
+  type: claimed
+  direction: provider-built
+  relationship: core-infrastructure
+  evidence: https://qitech.com.br/cases/fazcred/
+- partner: finanto
+  partner_name: Finanto
+  type: claimed
+  direction: provider-built
+  relationship: core-infrastructure
+  evidence: https://qitech.com.br/cases/finanto/
+- partner: bettr
+  partner_name: Bettr (Ant International)
+  type: claimed
+  direction: provider-built
+  relationship: core-infrastructure
+  evidence: https://qitech.com.br/cases/bettr-ant-international/
+- partner: vivo
+  partner_name: Vivo
+  type: claimed
+  direction: provider-built
+  relationship: core-infrastructure
+  evidence: https://qitech.com.br/cases/vivo-pay/
+- partner: jeeves
+  partner_name: Jeeves
+  type: claimed
+  direction: provider-built
+  relationship: core-infrastructure
+  evidence: https://qitech.com.br/cases/jeeves/
+- partner: lba-capital
+  partner_name: LBA Capital
+  type: claimed
+  direction: provider-built
+  relationship: core-infrastructure
+  evidence: https://qitech.com.br/cases/lba-capital/
+- partner: suno
+  partner_name: Suno
+  type: claimed
+  direction: provider-built
+  relationship: core-infrastructure
+  evidence: https://qitech.com.br/cases/suno-asset/
+- partner: ouro-preto
+  partner_name: Ouro Preto Investimentos
+  type: claimed
+  direction: provider-built
+  relationship: core-infrastructure
+  evidence: https://qitech.com.br/cases/ouro-preto/
+templates: []
+note: Integration edges based on customer case studies showing QI Tech as infrastructure provider for financial
+  services. No marketplace integrations (Zapier, Make, Workato, n8n) found.

@@ -1,0 +1,9 @@
+generated: '2026-10-18'
+method: none
+source: https://registry.npmjs.org/-/v1/search?text=qitech
+packages: []
+rejected:
+- name: qitech-wrapper
+  registry: npm
+  reason: 'official: false as written'
+note: 'no first-party package: every candidate a model listed was unowned (harvest-packages.py --audit)'

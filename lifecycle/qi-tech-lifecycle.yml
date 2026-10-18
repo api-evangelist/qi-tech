@@ -1,0 +1,23 @@
+generated: '2026-10-18'
+method: searched
+source: https://docs.qitech.com.br/documentation/introducao_api_reference
+versioning:
+  policy: Not documented
+  current_version: Not documented
+  deprecation_policy: Not documented
+deprecation:
+  policy: Not documented
+  sunset_headers: Not documented
+  notice_period: Not documented
+sla:
+  published: false
+  terms: Not documented
+status_page:
+  url: Not found
+  public: false
+support_periods:
+  - product: API
+    period: Not documented
+    end_of_life: Not documented
+    end_of_support: Not documented
+note: No versioning, deprecation policy, SLA, or status page documented in public documentation. Sandbox and production environments are always on same version according to documentation.

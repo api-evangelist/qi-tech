@@ -1,0 +1,172 @@
+{
+  "@context": {
+    "@vocab": "https://qitech.com.br/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "qi": "https://qitech.com.br/schema#",
+    "PostDeviceScanTokenRequest": "qi:PostDeviceScanTokenRequest",
+    "session_id": {
+      "@id": "qi:session_id",
+      "@type": "xsd:string"
+    },
+    "PostDeviceScanTokenResponse": "qi:PostDeviceScanTokenResponse",
+    "token": {
+      "@id": "qi:token",
+      "@type": "xsd:string"
+    },
+    "GetFaceRecognitionImageImagekeyResponse": "qi:GetFaceRecognitionImageImagekeyResponse",
+    "image_key": {
+      "@id": "qi:image_key",
+      "@type": "xsd:string"
+    },
+    "file_size": {
+      "@id": "qi:file_size",
+      "@type": "xsd:integer"
+    },
+    "width_px": {
+      "@id": "qi:width_px",
+      "@type": "xsd:integer"
+    },
+    "height_px": {
+      "@id": "qi:height_px",
+      "@type": "xsd:integer"
+    },
+    "created_at": {
+      "@id": "qi:created_at",
+      "@type": "xsd:string"
+    },
+    "GetFaceRecognitionRegistrationDocumentNumberDocumentnumberRe": "qi:GetFaceRecognitionRegistrationDocumentNumberDocumentnumberRe",
+    "registration_key": {
+      "@id": "qi:registration_key",
+      "@type": "xsd:string"
+    },
+    "GetFaceRecognitionRegistrationRegistrationkeyResponse": "qi:GetFaceRecognitionRegistrationRegistrationkeyResponse",
+    "PostLimitsPixAccountRequest": "qi:PostLimitsPixAccountRequest",
+    "account_id": {
+      "@id": "qi:account_id",
+      "@type": "xsd:string"
+    },
+    "registration_date": {
+      "@id": "qi:registration_date",
+      "@type": "xsd:string"
+    },
+    "limit": {
+      "@id": "qi:limit"
+    },
+    "PostLimitsPixAccountAccountidLimitUpdateRequestRequest": "qi:PostLimitsPixAccountAccountidLimitUpdateRequestRequest",
+    "withdraw": {
+      "@id": "qi:withdraw"
+    },
+    "change": {
+      "@id": "qi:change"
+    },
+    "transaction_natural_person": {
+      "@id": "qi:transaction_natural_person"
+    },
+    "transaction_legal_person": {
+      "@id": "qi:transaction_legal_person"
+    },
+    "PostLimitsPixAccountAccountidLimitUpdateRequestResponse": "qi:PostLimitsPixAccountAccountidLimitUpdateRequestResponse",
+    "limit_update_requests": {
+      "@id": "qi:limit_update_requests",
+      "@container": "@list"
+    },
+    "limit_update_request_id": {
+      "@id": "qi:limit_update_request_id",
+      "@type": "xsd:string"
+    },
+    "analysis_status": {
+      "@id": "qi:analysis_status",
+      "@type": "xsd:string"
+    },
+    "client_notification_status": {
+      "@id": "qi:client_notification_status",
+      "@type": "xsd:string"
+    },
+    "limit_update_request_status": {
+      "@id": "qi:limit_update_request_status",
+      "@type": "xsd:string"
+    },
+    "limit_update_request_type": {
+      "@id": "qi:limit_update_request_type",
+      "@type": "xsd:string"
+    },
+    "event_date": {
+      "@id": "qi:event_date",
+      "@type": "xsd:string"
+    },
+    "PostLimitsPixAccountAccountidRecipientListRequest": "qi:PostLimitsPixAccountAccountidRecipientListRequest",
+    "PostLimitsPixAccountAccountidRecipientListResponse": "qi:PostLimitsPixAccountAccountidRecipientListResponse",
+    "PostLimitsPixAccountAccountidRecipientListLimitUpdateRequest": "qi:PostLimitsPixAccountAccountidRecipientListLimitUpdateRequest",
+    "PostLimitsPixAccountAccountidRecipientListLimitUpdateRequest2": "qi:PostLimitsPixAccountAccountidRecipientListLimitUpdateRequest2",
+    "recipient_list_limit_update_requests": {
+      "@id": "qi:recipient_list_limit_update_requests",
+      "@container": "@list"
+    },
+    "PostLimitsPixAccountAccountidRecipientListRecipientRequest": "qi:PostLimitsPixAccountAccountidRecipientListRecipientRequest",
+    "document_number": {
+      "@id": "qi:document_number",
+      "@type": "xsd:string"
+    },
+    "PostLimitsPixAccountAccountidRecipientListRecipientResponse": "qi:PostLimitsPixAccountAccountidRecipientListRecipientResponse",
+    "recipient_id": {
+      "@id": "qi:recipient_id",
+      "@type": "xsd:string"
+    },
+    "recipient_status": {
+      "@id": "qi:recipient_status",
+      "@type": "xsd:string"
+    },
+    "GetOcrImageImagekeyFileResponse": "qi:GetOcrImageImagekeyFileResponse",
+    "file": {
+      "@id": "qi:file",
+      "@type": "xsd:string"
+    },
+    "PostOnboardingLegalPersonRequest": "qi:PostOnboardingLegalPersonRequest",
+    "id": {
+      "@id": "qi:id",
+      "@type": "xsd:string"
+    },
+    "legal_name": {
+      "@id": "qi:legal_name",
+      "@type": "xsd:string"
+    },
+    "source": {
+      "@id": "qi:source"
+    },
+    "documents": {
+      "@id": "qi:documents"
+    },
+    "legal_representatives": {
+      "@id": "qi:legal_representatives",
+      "@container": "@list"
+    },
+    "PostOnboardingNaturalPersonRequest": "qi:PostOnboardingNaturalPersonRequest",
+    "name": {
+      "@id": "qi:name",
+      "@type": "xsd:string"
+    },
+    "face": {
+      "@id": "qi:face"
+    },
+    "PutOnboardingTipoIdRequest": "qi:PutOnboardingTipoIdRequest",
+    "client_status": {
+      "@id": "qi:client_status",
+      "@type": "xsd:string"
+    },
+    "PostTestApikeyRequest": "qi:PostTestApikeyRequest",
+    "PostTestApikeyResponse": "qi:PostTestApikeyResponse",
+    "success": {
+      "@id": "qi:success",
+      "@type": "xsd:string"
+    }
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "QI Tech API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects QI Tech's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-18) from openapi/_ae-authored/qi-tech-openapi-generated.yml.",
+  "dcterms:created": "2026-10-18",
+  "dcterms:source": [
+    "openapi/_ae-authored/qi-tech-openapi-generated.yml"
+  ]
+}
