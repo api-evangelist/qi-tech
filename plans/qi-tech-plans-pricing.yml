@@ -21,3 +21,15 @@ plans:
       - Investment Fund Administration
     limits: []
 note: Pricing is enterprise/negotiated. Contact sales team via https://qitech.com.br/contato/ for commercial configuration.
+x-canonical:
+  generated: '2026-10-18'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models: []
+  units: []
+  plans:
+  - name: Enterprise
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
